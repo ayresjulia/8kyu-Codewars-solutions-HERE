@@ -1,2 +1,2 @@
-# 8kyu-Area-or-Perimeter
-8kyu Codewars solution
+# 8kyu
+8kyu Codewars solutions
