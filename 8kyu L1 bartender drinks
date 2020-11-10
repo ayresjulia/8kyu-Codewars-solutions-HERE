@@ -1,0 +1,34 @@
+/*Write a function getDrinkByProfession/get_drink_by_profession()
+that receives as input parameter a string, and produces outputs according
+to the following table:
+Input	Output
+"Jabroni"	"Patron Tequila"
+"School Counselor"	"Anything with Alcohol"
+ "Programmer"	 "Hipster Craft Beer"
+ "Bike Gang Member"	"Moonshine" 
+ "Politician"	"Your tax dollars" 
+ "Rapper"	"Cristal" 
+ *anything else*	"Beer" 
+Note: anything else is the default case: if the input to the function
+is not any of the values in the table, then the return value should be "Beer." */
+
+function getDrinkByProfession(param){
+    let result = param.toLowerCase();
+    return result === 'jabroni' ? "Patron Tequila"
+    : result === 'school counselor' ? "Anything with Alcohol"
+    : result === 'programmer' ? "Hipster Craft Beer"
+    : result === 'bike gang member' ? "Moonshine" 
+    : result === 'politician' ? "Your tax dollars" 
+    : result === 'rapper' ? "Cristal" 
+    : "Beer" ;
+  }
+  
+  console.log(getDrinkByProfession("jabrOni")); // "Patron Tequila"
+  console.log(getDrinkByProfession("scHOOl counselor")); // "Anything with Alcohol"
+  console.log(getDrinkByProfession("prOgramMer")); // "Hipster Craft Beer"
+  console.log(getDrinkByProfession("bike ganG member")); // "Moonshine"
+  console.log(getDrinkByProfession("poLiTiCian")); // "Your tax dollars"
+  console.log(getDrinkByProfession("rapper")); // "Cristal"
+  console.log(getDrinkByProfession("pundit")); // "Beer"
+  console.log(getDrinkByProfession("Pug")); // "Beer"
+  
