@@ -1,0 +1,23 @@
+/*Wolves have been reintroduced to Great Britain. You are a sheep farmer,
+and are now plagued by wolves which pretend to be sheep. Fortunately,
+you are good at spotting them.
+Warn the sheep in front of the wolf that it is about to be eaten.
+Remember that you are standing at the front of the queue which is at the end of the array:
+If the wolf is the closest animal to you, return
+"Pls go away and stop eating my sheep". Otherwise, return
+"Oi! Sheep number N! You are about to be eaten by a wolf!"
+where N is the sheep's position in the queue.
+Note: there will always be exactly one wolf in the array.*/
+
+function warnTheSheep(queue) {
+    if ('wolf' !== queue[queue.length-1]){ // if wolf is NOT the last in the array
+      let reverseQ = queue.reverse(); //reverse the array backwards
+      let sheepN = queue.indexOf('wolf'); // problem wants us to start array with 1, wolf will be the right index for the solution
+      return `Oi! Sheep number ${sheepN}! You are about to be eaten by a wolf!`
+    }
+    return `Pls go away and stop eating my sheep`
+    }
+    
+    console.log(warnTheSheep(["sheep", "sheep", "sheep", "wolf", "sheep", "sheep"])); // "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+    console.log(warnTheSheep(["sheep", "sheep", "wolf"])); // "Pls go away and stop eating my sheep"
+    
